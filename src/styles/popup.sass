@@ -1,0 +1,62 @@
+.popup
+    z-index: 100
+    position: absolute
+    background: none
+.form
+    width: 300px
+    border-radius: 20px
+    border: 2px solid black
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 450px
+    padding: 50px 20px
+    background: white
+    
+.form i
+    color: grey
+    position: relative
+    left: 90%
+    top: -70%
+.form-actions
+    display: flex
+    justify-content: space-around
+
+.form-actions button
+    background: none
+    border: none
+    font-size: 16px
+    text-transform: uppercase
+    &:hover
+        transition: 1s
+        background-color: grey
+    width: 30%
+    height: 40px
+
+.form-delete
+    color: red
+    
+.form-close
+    font-family: "Material Icons"
+    color: grey
+    position: absolute
+    font-size: 25px
+    top: 5%
+    left: 85%
+    background: none
+    border: none
+    border-radius: 20px
+    height: 30px
+    width: 30px
+    &:hover
+        transition: 1s
+        background-color: red
+
+.form input
+    border-top: none
+    border-left: none
+    border-right: none
+    outline: none
+    width: 100%
+    font-size: 14px
