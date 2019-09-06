@@ -84,7 +84,7 @@ function App({events,  popup}){
       </div>
       <div className="current-window">Calendar</div>
       <div className="calendar">
-        <Calendar />
+        <Calendar event = {events}/>
       </div>
     </div>
     <Modal isOpen={popup.status} style={{background : "white"}} >
