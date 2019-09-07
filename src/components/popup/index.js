@@ -16,6 +16,10 @@ const Popup = ({popup, popupClose, events, eventAdd,eventRemove}) => {
             id : events[events.length-1].id+1,
             notice : notice.current.value,
         }
+        if (popup.id){
+            eventRemove(popup.id)
+            console.log("hi")
+        }
         eventAdd(event)
         popupClose()
         return false

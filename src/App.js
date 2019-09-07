@@ -2,9 +2,7 @@ import React from 'react'
 import "./styles/global.sass"
 import Calendar from './components/calendar'
 import { connect } from "react-redux"
-import {eventAdd, eventChange, eventRemove} from './store/actions/event'
 import Popup from './components/popup'
-import { popupOpen, popupClose } from "./store/actions/popup"
 import Modal from 'react-modal'
 
 
@@ -79,22 +77,21 @@ function App({events,  popup}){
           <select>
             <option>John Doe</option>
           </select>
-          <img src="/static/Avatar.png" />
+          <img src="/src/static/Avatar.png" />
         </div>
       </div>
       <div className="current-window">Calendar</div>
       <div className="calendar">
-        <Calendar event = {events}/>
+        <Calendar/>
       </div>
     </div>
     <Modal isOpen={popup.status} style={{background : "white"}} >
-      <Popup events={events}></Popup>
+      <Popup></Popup>
     </Modal>
   </div>
   )
 }
 
-const mapDispatchToProps = dispatch => {}
 
 const mapStateToProps = state => {
   return {
@@ -105,5 +102,4 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
 )(App)

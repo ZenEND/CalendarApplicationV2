@@ -10,7 +10,7 @@ import { popupOpen, popupClose } from "../../store/actions/popup.js"
 import '../../styles/calendar.sass'
 
 class Calendar extends Component {
-  calendarComponentRef = React.createRef()
+  calendar = React.createRef()
   buttonText = {
     today:    'today',
     month:    'month',
@@ -21,8 +21,10 @@ class Calendar extends Component {
     next:     'next'
   }
   componentDidUpdate(){
-    this.calendarComponentRef.current.getApi().destroy()
-    this.calendarComponentRef.current.getApi().render()
+    console.log(this.calendar.current.getApi().getEvents());
+    let events = this.calendar.current.getApi().getEvents();
+    events.map((event) => event.remove())
+    this.props.events.map((event)=> this.calendar.current.getApi().addEvent(event))
   }
   render() {
     return (
@@ -36,7 +38,7 @@ class Calendar extends Component {
               right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
             }}
             plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin ]}
-            ref={ this.calendarComponentRef }
+            ref={ this.calendar }
             events={ this.props.events }
             id='calendar'
             height='parent'
@@ -59,6 +61,7 @@ class Calendar extends Component {
       </div>
     )
   }
+  
   eventClick = (info) => {
     const modalParams = {
       status : true,
@@ -74,7 +77,6 @@ class Calendar extends Component {
     this.props.popupOpen(modalParams)
     
   }
-
   eventDrop = (info) => {
     console.log(info)
     this.props.eventChange(info.event)
