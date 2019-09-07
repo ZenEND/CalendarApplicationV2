@@ -3,19 +3,22 @@ const eventList = [
       title: 'My Event',
       start: '2019-09-05T00:00:00.000Z',
       end: '2019-09-06T00:00:00.000Z',
-      id : 1
+      id : 1,
+      backgroundColor : "#3788d8"
     },
     {
         title: 'My Event',
         start: '2019-09-15T00:00:00.000Z',
         end: '2019-09-20T00:00:00.000Z',
-        id : 2
+        id : 2,
+        backgroundColor : "#3788d8"
       },
       {
         title: 'My Event',
         start: '2019-09-27T00:00:00.000Z',
         end: '2019-09-29T00:00:00.000Z',
-        id : 3
+        id : 3,
+        backgroundColor : "#3788d8"
       }
   ]
 export function events(state = eventList, action) {

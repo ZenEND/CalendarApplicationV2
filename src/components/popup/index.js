@@ -15,6 +15,7 @@ const Popup = ({popup, popupClose, events, eventAdd,eventRemove}) => {
             end : end.current.value,
             id : events[events.length-1].id+1,
             notice : notice.current.value,
+            backgroundColor : color.current.value,
         }
         if (popup.id){
             eventRemove(popup.id)
@@ -28,11 +29,18 @@ const Popup = ({popup, popupClose, events, eventAdd,eventRemove}) => {
         eventRemove(id)
         popupClose()
     }
+    const btnClass = [
+        null, null , null , null
+    ]
+    const handleClick = (e) => {
+        console.log(e)
+    }
     const title = React.createRef();
     const start = React.createRef();
     const end = React.createRef();
+    const color = React.createRef();
     const notice = React.createRef();
-    const handleChange = (value) =>{
+    const handleChange = (value) => {
         return value
     }
     return(
@@ -61,6 +69,12 @@ const Popup = ({popup, popupClose, events, eventAdd,eventRemove}) => {
                 <div>
                     <input placeholder="notice" autoComplete="off" ref={notice} name="title"></input>
                 </div>
+                <select className="popup-select" ref={color}>
+                    <option value="#3788d8" defaultChecked>Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                </select>
                 <div className="form-actions">
                     <div>
                     <button type="submit" className="form-edit">Edit</button>

@@ -4,7 +4,6 @@ import Calendar from './components/calendar'
 import { connect } from "react-redux"
 import Popup from './components/popup'
 import Modal from 'react-modal'
-import Avatar from './static/Avatar.png'
 
 function App({events,  popup}){
   Modal.setAppElement('#root')
@@ -77,7 +76,7 @@ function App({events,  popup}){
           <select>
             <option>John Doe</option>
           </select>
-          <img src={Avatar} />
+          <img src='./static/Avatar.png' />
         </div>
       </div>
       <div className="current-window">Calendar</div>
