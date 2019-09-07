@@ -29,6 +29,7 @@ class Calendar extends Component {
   render() {
     return (
       <div className='calendar-block'>
+        <h1>Calendar View</h1>
         <div className='container'>
           <FullCalendar
             defaultView="dayGridMonth"
@@ -45,7 +46,6 @@ class Calendar extends Component {
             buttonText={this.buttonText}
             editable="true"
             timeZone='UTC'
-            rerenderDelay={10}
             eventDurationEditable={false}
             themeSystem='bootstrap'
             editable="true"

@@ -14,39 +14,39 @@ function App({events,  popup}){
       title : "Home",
     },
     {
-      icon: "equalizer",
+      icon: "poll",
       title : "Dashboard",
     },
     {
-      icon: "mail_outline",
+      icon: "envelope",
       title : "Inbox",
     },
     {
-      icon: "notes",
+      icon: "barcode",
       title : "Products",
     },
     {
-      icon: "dashboard",
+      icon: "receipt",
       title : "Invoices",
     },
     {
-      icon: "person_outline",
+      icon: "user",
       title : "Customers",
     },
     {
-      icon: "forum",
+      icon: "comments",
       title : "Chat Room",
     },
     {
-      icon: "today",
+      icon: "calendar-alt",
       title : "Calendar",
     },
     {
-      icon: "device_unknown",
+      icon: "life-ring",
       title : "Help Center",
     },
     {
-      icon: "settings_applications",
+      icon: "cog",
       title : "Settings",
     },
   ]
@@ -58,7 +58,7 @@ function App({events,  popup}){
         </div>
         <div className="list">
           {list.map((item,i)=>(
-            <button key={i}><i className="material-icons">{item.icon}</i>{item.title}</button>
+            <button key={i}><i className={`fas fa-${item.icon} `}></i>{item.title}</button>
           ))}
         </div>
     </div>
@@ -66,12 +66,12 @@ function App({events,  popup}){
       <div className="top-bar">
         <div className="search-pool">
           <input/>
-          <i className="material-icons search">search</i>
+          <i className="fas fa-search"></i>
         </div>
         <div className="actions-pool">
-          <button><i className="material-icons">device_unknown</i></button>
-          <button><i className="material-icons">forum</i></button>
-          <button><i className="material-icons">notification_important</i></button>
+          <button><i className="fas fa-life-ring"></i></button>
+          <button><i className="fas fa-comments"></i></button>
+          <button><i className="fas fa-bell"></i></button>
 
           <select>
             <option>John Doe</option>
