@@ -21,11 +21,10 @@ bower_components
 
 .lock-wscript
 
-build/Release
+build/
 
 node_modules/
 jspm_packages/
-build/
 typings/
 .npm
 
