@@ -17,7 +17,7 @@ const Popup = ({popup, popupClose, events, eventAdd,eventRemove}) => {
             notice : notice.current.value,
             backgroundColor : color.current.value,
         }
-        if (popup.id!=null){
+        if (popup.id){
             eventRemove(popup.id)
             console.log("hi")
         }
