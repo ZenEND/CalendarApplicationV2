@@ -76,7 +76,7 @@ function App({events,  popup}){
           <select>
             <option>John Doe</option>
           </select>
-          <img src='/src/static/Avatar.png' />
+          <img src='../static/Avatar.png' />
         </div>
       </div>
       <div className="current-window">Calendar</div>
